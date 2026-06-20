@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drive The Future | Premium Cars</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- AdSense Verification Code Placeholder (Paste your code below this line) -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXX" crossorigin="anonymous"></script> -->
+</head>
+<body>
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader-logo">DRIVE.</div>
+        <div class="loader-line"></div>
+    </div>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="custom-cursor"></div>
+    <nav>
+        <div class="logo">DRIVE.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Models</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="#">Design</a></li>
+            <li><a href="#" class="cart-btn" id="cart-open-btn">Cart (0)</a></li>
+            <li><button id="theme-toggle" class="theme-btn">☀️</button></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="Video Generation Request.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-up">
+            <h1>Beyond Limits</h1>
+            <p>Experience the next generation of performance.</p>
+            <div class="scroll-indicator">↓</div>
+        </div>
+    </div>
+
+    <div class="canvas-container">
+        <div class="sticky-wrapper">
+            <canvas id="car-sequence"></canvas>
+        </div>
+        
+        <div class="scroll-content">
+            <section class="text-section slide-up-section">
+                <div class="content-block">
+                    <h2>Aerodynamic Mastery</h2>
+                    <p>Designed to cut through the air with zero resistance. Every curve serves a purpose.</p>
+                </div>
+            </section>
+            
+            <section class="text-section slide-down-section right-align">
+                <div class="content-block">
+                    <h2>Unmatched Speed</h2>
+                    <p>From 0 to 60 in the blink of an eye. The ultimate driving machine.</p>
+                </div>
+            </section>
+            
+            <section class="text-section slide-up-section">
+                <div class="content-block">
+                    <h2>Precision Engineering</h2>
+                    <p>Built with materials that defy logic. Lighter, stronger, faster.</p>
+                </div>
+            </section>
+
+            <section class="text-section slide-down-section right-align" style="margin-bottom: 50vh;">
+                <div class="content-block">
+                    <h2>Own The Road</h2>
+                    <p>It's not just a car. It's a statement.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- E-Commerce Section -->
+    <section class="ecommerce-section">
+        <div class="section-title">
+            <h2>Featured Models</h2>
+            <p>Select your perfect driving machine.</p>
+        </div>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="images/ezgif-frame-010.jpg" alt="Aero X">
+                </div>
+                <div class="product-info">
+                    <h3>Aero X</h3>
+                    <p class="specs">0-60 in 2.1s • 600mi Range</p>
+                    <div class="price-row">
+                        <span class="price">$120,000</span>
+                        <button class="btn-buy">Reserve Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="images/ezgif-frame-030.jpg" alt="Speedster V">
+                </div>
+                <div class="product-info">
+                    <h3>Speedster V</h3>
+                    <p class="specs">0-60 in 1.9s • 500mi Range</p>
+                    <div class="price-row">
+                        <span class="price">$145,000</span>
+                        <button class="btn-buy">Reserve Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="images/ezgif-frame-050.jpg" alt="Phantom R">
+                </div>
+                <div class="product-info">
+                    <h3>Phantom R</h3>
+                    <p class="specs">0-60 in 2.5s • 700mi Range</p>
+                    <div class="price-row">
+                        <span class="price">$95,000</span>
+                        <button class="btn-buy">Reserve Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE-OUT CART PANEL -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-panel" id="cart-panel">
+        <div class="cart-header">
+            <h2>Your Garage</h2>
+            <button class="close-cart" id="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+            <p class="empty-cart">Your garage is currently empty.</p>
+        </div>
+        <div class="cart-footer">
+            <button class="btn-checkout">Checkout</button>
+        </div>
+    </div>
+
+    <!-- RESERVATION MODAL -->
+    <div class="modal-overlay" id="reservation-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Book a Test Drive</h2>
+            <form id="reservation-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="date" required>
+                <button type="submit" class="btn-submit">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- AUDIO ELEMENTS -->
+    <audio id="engine-sound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_73142417e0.mp3?filename=sports-car-engine-revving-101416.mp3"></audio>
+    <audio id="bg-music" src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3?filename=ambient-piano-ampamp-strings-10711.mp3" loop></audio>
+
+    <div class="audio-control">
+        <button id="audio-toggle">🎵 Play</button>
+    </div>
+
+    <!-- CHATBOT WIDGET -->
+    <div class="chatbot-container">
+        <button class="chat-toggle" id="chat-toggle">💬</button>
+        <div class="chat-panel" id="chat-panel">
+            <div class="chat-header">
+                <h3>DRIVE Assistant</h3>
+                <button id="close-chat">&times;</button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="msg bot">Hello! How can I help you experience the future of driving today?</div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Type a message...">
+                <button id="send-chat">➔</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Section for AdSense -->
+    <section class="about-us-section" id="about">
+        <div class="section-title">
+            <h2>About DRIVE</h2>
+            <p>Pioneering the future of automotive excellence.</p>
+        </div>
+        <div class="about-content">
+            <p>Welcome to DRIVE, your ultimate destination for premium, high-performance vehicles. Our mission is to redefine the driving experience by offering a curated selection of the most advanced and aerodynamically perfected cars on the market. We believe that a car is not merely a mode of transportation, but an extension of one's identity and a statement of engineering mastery. Over the years, we have partnered with top-tier automotive engineers to bring you models that boast unmatched speed, precision, and sustainability.</p>
+            
+            <p>In today's fast-paced world, the intersection of luxury and technology is more important than ever. Our featured models, from the Aero X to the Phantom R, are testaments to what can be achieved when visionary design meets cutting-edge technology. Every vehicle in our showroom is meticulously inspected to ensure it meets our rigorous standards for safety, performance, and environmental responsibility. We pride ourselves on pushing the boundaries of what is possible, bringing you closer to the future of driving with every turn of the wheel.</p>
+            
+            <p>Customer satisfaction remains at the heart of our operations. We offer a seamless online browsing and reservation experience, ensuring that your journey to owning a masterpiece is as smooth as the drive itself. Our dedicated support team is always on hand to assist you, whether you are exploring our latest models or booking a test drive. Join us on this exhilarating journey and experience the next generation of performance today.</p>
+        </div>
+    </section>
+
+    <!-- Footer with Legal Links -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2>DRIVE.</h2>
+                <p>Experience the next generation of performance.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 DRIVE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

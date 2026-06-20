@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews | Premium Cars</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader-logo">DRIVE.</div>
+        <div class="loader-line"></div>
+    </div>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="custom-cursor"></div>
+    <nav>
+        <div class="logo">DRIVE.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Models</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="#">Design</a></li>
+            <li><a href="#" class="cart-btn" id="cart-open-btn">Cart (0)</a></li>
+            <li><button id="theme-toggle" class="theme-btn">☀️</button></li>
+        </ul>
+    </nav>
+
+    <div class="reviews-header section-title fade-up">
+        <h2>Client Experiences</h2>
+        <p>Don't just take our word for it. Hear from those who drive the future.</p>
+    </div>
+
+    <div class="reviews-grid">
+        <!-- Review 1 -->
+        <div class="review-card fade-up">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"The Aero X is not just a car, it's a masterpiece. The acceleration is mind-blowing and the design turns heads everywhere I go. Absolutely flawless experience."</p>
+            <div class="reviewer">
+                <div class="avatar">JM</div>
+                <div class="reviewer-info">
+                    <h4>James Miller</h4>
+                    <p>Aero X Owner</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card fade-up">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"I've owned luxury vehicles for 20 years, but the Phantom R takes it to another level. The build quality and the silent, powerful engine make every commute a joy."</p>
+            <div class="reviewer">
+                <div class="avatar">SK</div>
+                <div class="reviewer-info">
+                    <h4>Sarah Kensington</h4>
+                    <p>Phantom R Owner</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card fade-up">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"The customer service was as premium as the car itself. The delivery process was smooth, and driving the Speedster V is an absolute adrenaline rush."</p>
+            <div class="reviewer">
+                <div class="avatar">DT</div>
+                <div class="reviewer-info">
+                    <h4>David Thompson</h4>
+                    <p>Speedster V Owner</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="review-card fade-up">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"Exquisite attention to detail. Every material used in the cabin feels expensive and durable. It truly feels like driving a spaceship on the road."</p>
+            <div class="reviewer">
+                <div class="avatar">AL</div>
+                <div class="reviewer-info">
+                    <h4>Amanda Lewis</h4>
+                    <p>Aero X Owner</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Review 5 -->
+        <div class="review-card fade-up">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"Nothing compares to the tech inside. The autonomous driving features are incredibly reliable. Worth every single penny."</p>
+            <div class="reviewer">
+                <div class="avatar">RB</div>
+                <div class="reviewer-info">
+                    <h4>Robert Blake</h4>
+                    <p>Phantom R Owner</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review 6 -->
+        <div class="review-card fade-up">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"If you want to own the road, this is it. The aerodynamic design isn't just for show; the efficiency is off the charts for a performance vehicle."</p>
+            <div class="reviewer">
+                <div class="avatar">MC</div>
+                <div class="reviewer-info">
+                    <h4>Michael Chang</h4>
+                    <p>Speedster V Owner</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AUDIO ELEMENTS -->
+    <audio id="engine-sound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_73142417e0.mp3?filename=sports-car-engine-revving-101416.mp3"></audio>
+    <audio id="bg-music" src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3?filename=ambient-piano-ampamp-strings-10711.mp3" loop></audio>
+
+    <div class="audio-control">
+        <button id="audio-toggle">🎵 Play</button>
+    </div>
+
+    <!-- CHATBOT WIDGET -->
+    <div class="chatbot-container">
+        <button class="chat-toggle" id="chat-toggle">💬</button>
+        <div class="chat-panel" id="chat-panel">
+            <div class="chat-header">
+                <h3>DRIVE Assistant</h3>
+                <button id="close-chat">&times;</button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="msg bot">Hello! How can I help you experience the future of driving today?</div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Type a message...">
+                <button id="send-chat">➔</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
